@@ -1,0 +1,28 @@
+---
+name: MooseX-GlobRef-Object
+version: 0.01
+author:
+  - 'Piotr Roszatycki <dexter@debian.org>'
+abstract: Store a Moose object in glob reference
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Moose: 0
+  perl: 5.006
+build_requires:
+  Test::Unit::Lite: 0
+provides:
+  MooseX::GlobRef::Meta::Class:
+    file: lib/MooseX/GlobRef/Meta/Class.pm
+    version: 0.01
+  MooseX::GlobRef::Meta::Instance:
+    file: lib/MooseX/GlobRef/Meta/Instance.pm
+    version: 1
+  MooseX::GlobRef::Object:
+    file: lib/MooseX/GlobRef/Object.pm
+    version: 0.01
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
