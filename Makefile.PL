@@ -8,7 +8,7 @@ WriteMakefile
           'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/MooseX/GlobRef/Object.pm',
           'PREREQ_PM' => {
-                           'Test::Unit::Lite' => 0,
+                           'Test::Unit::Lite' => '0.07',
                            'Moose' => 0
                          }
         )
