@@ -1,6 +1,6 @@
 ---
 name: MooseX-GlobRef-Object
-version: 0.0201
+version: 0.0202
 author:
   - 'Piotr Roszatycki <dexter@debian.org>'
 abstract: Store a Moose object in glob reference
@@ -21,7 +21,7 @@ provides:
     version: 0.02
   MooseX::GlobRef::Object:
     file: lib/MooseX/GlobRef/Object.pm
-    version: 0.0201
+    version: 0.0202
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
