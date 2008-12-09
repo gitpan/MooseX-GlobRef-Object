@@ -22,7 +22,7 @@ SYNOPSIS
         return readline $fh;
       }
 
-      my $io = new My::IO filename=>'/etc/passwd';
+      my $io = My::IO->new( filename=>'/etc/passwd' );
       print "::::::::::::::\n";
       print $io->filename, "\n";
       print "::::::::::::::\n";
@@ -34,7 +34,7 @@ DESCRIPTION
     handle. The class attributes will be stored in anonymous hash associated
     with glob reference. It allows to create a Moose version of IO::Handle.
 
-    The elements of hash can be accessed with ${*$self}->{key} expression.
+    The elements of hash can be accessed with `${*$self}->{key}' expression.
 
     You can use MooseX::GlobRef::Meta::Instance metaclass directly if you
     need more customised configuration.
@@ -43,7 +43,7 @@ AUTHOR
     Piotr Roszatycki <dexter@debian.org>
 
 LICENSE
-    Copyright (C) 2007 by Piotr Roszatycki <dexter@debian.org>.
+    Copyright (C) 2007, 2008 by Piotr Roszatycki <dexter@debian.org>.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

@@ -1,4 +1,20 @@
 ------------------------------------------------------------------------
+0.03 | Piotr Roszatycki <dexter@debian.org> | 2008-12-09
+
+New:
+
+* Implemented also as class trait:
+
+  package My::Class;
+  use Moose -traits => 'GlobRef';
+
+Changes:
+
+* Requires Moose >= 0.56 because of class trait.
+* Requires parent module instead base.
+* Build requires Test::Assert.
+
+------------------------------------------------------------------------
 0.0203 | Piotr Roszatycki <dexter@debian.org> | 2008-04-09
 
 * Works with the latest Moose::make_immutable method.

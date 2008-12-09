@@ -1,8 +1,6 @@
 #!/usr/bin/perl -c
 
 package MooseX::GlobRef::Meta::Class;
-use 5.006;
-our $VERSION = 0.02_03;
 
 =head1 NAME 
 
@@ -15,11 +13,14 @@ other purposes and funcionality.
 
 =cut
 
-
+use 5.006;
 use strict;
 use warnings;
 
-use base 'Moose::Meta::Class';
+our $VERSION = 0.03;
+
+
+use parent 'Moose::Meta::Class';
 
 
 1;
@@ -47,7 +48,7 @@ Piotr Roszatycki E<lt>dexter@debian.orgE<gt>
 
 =head1 LICENSE
 
-Copyright (C) 2007 by Piotr Roszatycki E<lt>dexter@debian.orgE<gt>.
+Copyright (C) 2007, 2008 by Piotr Roszatycki E<lt>dexter@debian.orgE<gt>.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

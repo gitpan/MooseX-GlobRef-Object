@@ -1,6 +1,6 @@
 ---
 name: MooseX-GlobRef-Object
-version: 0.0203
+version: 0.03
 author:
   - 'Piotr Roszatycki <dexter@debian.org>'
 abstract: Store a Moose object in glob reference
@@ -8,21 +8,29 @@ license: perl
 resources:
   license: http://dev.perl.org/licenses/
 requires:
-  Moose: 0
+  Moose: 0.56
+  parent: 0
   perl: 5.006
 build_requires:
+  Test::Assert: 0
   Test::Unit::Lite: 0.07
 provides:
+  Moose::Meta::Class::Custom::Trait::GlobRef:
+    file: lib/Moose/Meta/Class/Custom/Trait/GlobRef.pm
+    version: 0.03
   MooseX::GlobRef::Meta::Class:
     file: lib/MooseX/GlobRef/Meta/Class.pm
-    version: 0.0203
+    version: 0.03
+  MooseX::GlobRef::Meta::Class::Trait::GlobRef:
+    file: lib/MooseX/GlobRef/Meta/Class/Trait/GlobRef.pm
+    version: 0.03
   MooseX::GlobRef::Meta::Instance:
     file: lib/MooseX/GlobRef/Meta/Instance.pm
-    version: 0.0203
+    version: 0.03
   MooseX::GlobRef::Object:
     file: lib/MooseX/GlobRef/Object.pm
-    version: 0.0203
-generated_by: Module::Build version 0.2808
+    version: 0.03
+generated_by: Module::Build version 0.280801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

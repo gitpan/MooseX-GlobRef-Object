@@ -1,8 +1,6 @@
 #!/usr/bin/perl -c
 
 package MooseX::GlobRef::Meta::Instance;
-use 5.006;
-our $VERSION = 0.02_03;
 
 =head1 NAME 
 
@@ -48,11 +46,14 @@ Notice, that "use metaclass" have to be before "use Moose".
 
 =cut
 
-
+use 5.006;
 use strict;
 use warnings;
 
-use base 'Moose::Meta::Instance';
+our $VERSION = 0.03;
+
+
+use parent 'Moose::Meta::Instance';
 
 
 sub create_instance {
@@ -65,42 +66,50 @@ sub create_instance {
     ${*$fh} = {};
 
     return bless $fh => $self->associated_metaclass->name;
-}
+};
+
 
 sub get_slot_value {
     my ($self, $instance, $slot_name) = @_;
     return ${*$instance}->{$slot_name};
-}
+};
+
 
 sub set_slot_value {
     my ($self, $instance, $slot_name, $value) = @_;
     return ${*$instance}->{$slot_name} = $value;
-}
+};
+
 
 sub deinitialize_slot {
     my ( $self, $instance, $slot_name ) = @_;
-    delete ${*$instance}->{$slot_name};
-}
+    return delete ${*$instance}->{$slot_name};
+};
+
 
 sub is_slot_initialized {
     my ($self, $instance, $slot_name) = @_;
-    exists ${*$instance}->{$slot_name} ? 1 : 0;
-}
+    return exists ${*$instance}->{$slot_name} ? 1 : 0;
+};
+
 
 sub weaken_slot_value {
     my ($self, $instance, $slot_name) = @_;
-    Scalar::Util::weaken ${*$instance}->{$slot_name};
-}
+    return Scalar::Util::weaken ${*$instance}->{$slot_name};
+};
+
 
 sub inline_create_instance {
     my ($self, $class_variable) = @_;
     return 'select select my $fh; ${*$fh} = {}; bless $fh => ' . $class_variable;
-}
+};
+
 
 sub inline_slot_access {
     my ($self, $instance, $slot_name) = @_;
     return sprintf '${*{%s}}->{%s}', $instance, $slot_name;
-}
+};
+
 
 1;
 
@@ -151,7 +160,7 @@ Piotr Roszatycki E<lt>dexter@debian.orgE<gt>
 
 =head1 LICENSE
 
-Copyright (C) 2007 by Piotr Roszatycki E<lt>dexter@debian.orgE<gt>.
+Copyright (C) 2007, 2008 by Piotr Roszatycki E<lt>dexter@debian.orgE<gt>.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
