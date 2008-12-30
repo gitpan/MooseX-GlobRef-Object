@@ -15,23 +15,23 @@ MooseX::GlobRef::Meta::Instance - Instance metaclass for globref objects
 
   use Moose;
 
-  has 'filename' => ( is => 'ro', isa => 'Str', required => 1 );
+  has 'file' => ( is => 'ro', isa => 'Str', required => 1 );
 
   sub open {
     my $fh = shift;
     my $hashref = ${*$fh};
-    open $fh, $hashref->{filename} or confess "cannot open";
+    open $fh, $hashref->{file} or confess "cannot open";
     return $fh;
-  }
+  };
 
   sub getlines {
     my $fh = shift;
     return readline $fh;
-  }
+  };
 
-  my $io = new My::IO filename=>'/etc/passwd';
+  my $io = My::IO->new( file => '/etc/passwd' );
   print "::::::::::::::\n";
-  print $io->filename, "\n";
+  print $io->file, "\n";
   print "::::::::::::::\n";
   $io->open;
   print $io->getlines;
@@ -50,7 +50,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 
 use parent 'Moose::Meta::Instance';
@@ -146,7 +146,7 @@ L<Moose::Meta::Instance>
 
 =item inline_slot_access
 
-The methods overrided by this class.
+The methods overridden by this class.
 
 =back
 

@@ -3,16 +3,16 @@ require 5.006;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-          'PL_FILES' => {},
-          'INSTALLDIRS' => 'site',
           'NAME' => 'MooseX::GlobRef::Object',
-          'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/MooseX/GlobRef/Object.pm',
           'PREREQ_PM' => {
-                           'parent' => 0,
-                           'Test::Unit::Lite' => '0.07',
+                           'Moose' => '0.56',
                            'Test::Assert' => 0,
-                           'Moose' => '0.56'
-                         }
+                           'Test::Unit::Lite' => '0.11',
+                           'parent' => 0
+                         },
+          'INSTALLDIRS' => 'site',
+          'EXE_FILES' => [],
+          'PL_FILES' => {}
         )
 ;
