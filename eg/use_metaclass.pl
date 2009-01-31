@@ -1,4 +1,6 @@
-#!/usr/bin/perl -I../lib
+#!/usr/bin/perl
+
+use lib 'lib', '../lib';
 
 package My::IO;
 
@@ -15,9 +17,8 @@ has 'file' => (
 );
 
 sub open {
-    my $fh      = shift;
-    my $hashref = ${*$fh};
-    open $fh, $hashref->{file} or confess "cannot open";
+    my $fh = shift;
+    open $fh, $fh->file or confess "cannot open";
     return $fh;
 }
 

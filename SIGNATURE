@@ -1,0 +1,61 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 e1c37ac68bc1b23703fc918a7f348d9a38f4deb6 Build.PL
+SHA1 dffef82b23552d38d7d4bcab46759b1392b15414 Changes
+SHA1 70939db1625f4967d837975f4cfe684bc69e3919 Incompatibilities
+SHA1 74b1c398020b9c1e8849b7982751cb70ecc5de8d LICENSE
+SHA1 42c2a735e8d00ac62ac2ac2f06c72a52c3196987 MANIFEST
+SHA1 7d9037725a8f8c9c65eff1e091819c215f55c650 MANIFEST.SKIP
+SHA1 ec5cef818adf63ff330af9bcd086975fec54522b META.yml
+SHA1 913073630a6ac5d75f088c940259177b0fc44bce Makefile.PL
+SHA1 9f685bf149f8e68c0462001f2995303def2a421c README
+SHA1 2255b80c95a5f03eae860ea1649a504cd5ed9976 eg/extends_object.pl
+SHA1 8659309abf05597a67bf867532f3432425f1024d eg/use_metaclass.pl
+SHA1 77fb2f14f1f4bfcfb5c91c301e4b65054f061050 lib/MooseX/GlobRef/Meta/Class.pm
+SHA1 ef8246ff28d456ab858209d55446afa3250a3e7e lib/MooseX/GlobRef/Meta/Instance.pm
+SHA1 13bd3ec96c9c4f223cf3d85b32f350c9af9ebc5a lib/MooseX/GlobRef/Object.pm
+SHA1 e47c55c0d96cf86940b849470ebfbaa73b48ebeb t/010_extends_object.t
+SHA1 3a8180685c41a7eec483a5c2265690b0d3f22a8b t/020_metaclass.t
+SHA1 eb182c30eba78598b400b4e6fc22b6462821df2e t/030_metaclass_instance.t
+SHA1 284616602da8868175bb0283235632b7efaec0bc t/test.pl
+SHA1 2e33825aaa8f7f6e0fb8704644055ae989b49caa t/tlib/MooseX/GlobRef/Meta/ClassImmutableTest.pm
+SHA1 8794160cb09095ac401c59795dcaaefc7d7ba8aa t/tlib/MooseX/GlobRef/Meta/ClassTest.pm
+SHA1 795a548ff27403e781846f51f971993c944d09da t/tlib/MooseX/GlobRef/Meta/ClassTestSuite.pm
+SHA1 58869044eac519aaa37b3f750232ef7927203a68 t/tlib/MooseX/GlobRef/Meta/InstanceImmutableTest.pm
+SHA1 313776117c62c405ff8285058c19f4559c1cdd77 t/tlib/MooseX/GlobRef/Meta/InstanceTest.pm
+SHA1 48533237de4bdd3bf79364a355ff98b42f18d161 t/tlib/MooseX/GlobRef/Meta/InstanceTestSuite.pm
+SHA1 80a058e68eb6dbeb4eb74d17544a8bef6106da67 t/tlib/MooseX/GlobRef/ObjectImmutableTest.pm
+SHA1 881a06bbaa794584559b4f6019d17baa86ea9546 t/tlib/MooseX/GlobRef/ObjectTest.pm
+SHA1 5e39d42d5bb8c3a018c1223c2b28bfe2bd98ad7a t/tlib/MooseX/GlobRef/ObjectTestSuite.pm
+SHA1 b56b358ce5eb4fd22d3e66f1cb1c5231bf0c457f xt/consistent_version_numbers.t
+SHA1 cd748ade99c6f4613a6a8b2579df4f55af6b9db8 xt/copyright.t
+SHA1 650dccfa9b6f5a98cf731c89041bea8935dbc623 xt/cover.pl
+SHA1 0cc035a7059d85dbe3345dd77ab3bfcb26747eea xt/distribution.t
+SHA1 ce95b12540d6fa64569e97e3bc58142d567a9109 xt/kwalitee.t
+SHA1 6e7f9dde7560793bcb40acc41561e07d163ad6d1 xt/minimumversion.t
+SHA1 8625d867e8834f8d88abc5b1d81ce455d8001b04 xt/perlcritic.t
+SHA1 0fb86301cacc373b33a51d85dc55c62f3d95e080 xt/perlcriticrc
+SHA1 775b3ac02805b6d703614f42608732fb43af2a41 xt/pod_coverage.t
+SHA1 7a279f0b1d25716c7355d42145319ade7264916a xt/pod_spell.xt
+SHA1 2c579b58def8daec94f41b628ac81c256faaa2b1 xt/pod_syntax.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkmERDEACgkQhMHHe8CxCluZywCgjLkjRN+nSpfcJPbVeUtoCYw+
+gLYAoIvx24V24weABhaPjTg8hFo92a2Y
+=CnsM
+-----END PGP SIGNATURE-----

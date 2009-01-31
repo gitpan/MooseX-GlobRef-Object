@@ -1,6 +1,8 @@
 package MooseX::GlobRef::Meta::InstanceImmutableTest;
 
+use Test::Unit::Lite;
 use parent 'Test::Unit::TestCase';
+
 use Test::Assert ':all';
 
 use Scalar::Util 'reftype';
@@ -27,7 +29,6 @@ sub test___isa {
     assert_not_null($obj);
     assert_true($obj->isa('MooseX::GlobRef::Meta::InstanceImmutableTest::Test1'));
     assert_equals('GLOB', reftype($obj));
-    assert_equals('HASH', reftype(${*$obj}));
 };
 
 sub test_accessor {

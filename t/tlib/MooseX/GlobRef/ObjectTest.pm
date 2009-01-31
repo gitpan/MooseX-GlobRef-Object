@@ -1,6 +1,8 @@
 package MooseX::GlobRef::ObjectTest;
 
+use Test::Unit::Lite;
 use parent 'Test::Unit::TestCase';
+
 use Test::Assert ':all';
 
 use Scalar::Util 'reftype';
@@ -23,6 +25,16 @@ use Scalar::Util 'reftype';
     has weak_field => (
         is      => 'rw',
     );
+
+    sub new {
+        my $class = shift;
+        my $self = $class->SUPER::new(@_);
+        my $scalarref = ${*$self};
+        $$scalarref = 'SCALAR';
+        my $arrayref = \@{*$self}; 
+        @$arrayref = ('ARRAY'); 
+        return $self;
+    }; 
 };
 
 
@@ -32,7 +44,6 @@ sub test___isa {
     assert_not_null($obj);
     assert_true($obj->isa('MooseX::GlobRef::ObjectTest::Test1'));
     assert_equals('GLOB', reftype($obj));
-    assert_equals('HASH', reftype(${*$obj}));
 };
 
 sub test_accessor {

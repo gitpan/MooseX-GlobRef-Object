@@ -1,9 +1,8 @@
 package MooseX::GlobRef::ObjectTestSuite;
 
+use Test::Unit::Lite;
 use parent 'Test::Unit::TestSuite';
 
-use Test::Unit::Lite;
-    
 sub suite {
     my $class = shift;
     my $suite = Test::Unit::TestSuite->empty_new('ExtendsObject');
