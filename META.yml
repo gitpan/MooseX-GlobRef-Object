@@ -1,6 +1,6 @@
 ---
 name: MooseX-GlobRef-Object
-version: 0.05
+version: 0.06
 author:
   - 'Piotr Roszatycki <dexter@cpan.org>'
 abstract: Store a Moose object in glob reference
@@ -15,17 +15,17 @@ requires:
   perl: 5.006
 build_requires:
   Test::Assert: 0
-  Test::Unit::Lite: 0.11
+  Test::Unit::Lite: 0.12
 provides:
   MooseX::GlobRef::Meta::Class:
     file: lib/MooseX/GlobRef/Meta/Class.pm
-    version: 0.05
+    version: 0.06
   MooseX::GlobRef::Meta::Instance:
     file: lib/MooseX/GlobRef/Meta/Instance.pm
-    version: 0.05
+    version: 0.06
   MooseX::GlobRef::Object:
     file: lib/MooseX/GlobRef/Object.pm
-    version: 0.05
+    version: 0.06
 generated_by: Module::Build version 0.31012
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

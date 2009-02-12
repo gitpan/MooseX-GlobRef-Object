@@ -8,7 +8,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Moose' => '0.56',
                            'Test::Assert' => 0,
-                           'Test::Unit::Lite' => '0.11',
+                           'Test::Unit::Lite' => '0.12',
                            'parent' => 0
                          },
           'INSTALLDIRS' => 'site',

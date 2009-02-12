@@ -40,7 +40,7 @@ DESCRIPTION
 
     or shorter:
 
-      print do { \%{*$self} }->{key};
+      print *$self->{key};
 
     but the standard accessors should be used instead:
 
@@ -48,6 +48,9 @@ DESCRIPTION
 
     You can use MooseX::GlobRef::Meta::Instance metaclass directly if you
     need more customised configuration.
+
+INHERITANCE
+    * extends Moose::Object
 
 AUTHOR
     Piotr Roszatycki <dexter@cpan.org>
